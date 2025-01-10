@@ -57,13 +57,23 @@ body {
 }
 
 #app ul {
-    list-style: disc;
-    margin-left: 1.5rem;
     font-size: 1rem;
 }
 
 #app li {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 1rem; 
+    word-break: break-word;
+}
+
+#app li::before { 
+    content: '•';
+    position: absolute;
+    left: 0;
 }
 
 #app a {
@@ -76,6 +86,7 @@ body {
     border-radius: 0.25rem;
     cursor: pointer;
     transition: 0.3s;
+    flex-shrink: 0;
 }
 
 #app a:hover {
